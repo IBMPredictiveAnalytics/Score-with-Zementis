@@ -1,10 +1,8 @@
-# Get Coordinates with Esri
-Get the latitude and the longitude of a location in IBM SPSS Modeler using Esri services 
+# Score with Zementis
+Adapa scoring engine integrated with IBM SPSS
 
-
-![Map](https://raw.githubusercontent.com/IBMPredictiveAnalytics/Get-Coordinates-Esri/master/Screenshot/Illustration1.png)
-![Map](https://raw.githubusercontent.com/IBMPredictiveAnalytics/Get-Coordinates-Esri/master/Screenshot/Illustration2.png)
-![Map](https://raw.githubusercontent.com/IBMPredictiveAnalytics/Get-Coordinates-Esri/master/Screenshot/Illustration3.png)
+![Map](https://raw.githubusercontent.com/IBMPredictiveAnalytics/Score-with-Zementis/master/Screenshot/Illustration1.png)
+![Map](https://raw.githubusercontent.com/IBMPredictiveAnalytics/Score-with-Zementis/master/Screenshot/Illustration2.png)
 
 
 
@@ -38,7 +36,7 @@ Documentation and samples
 ----
 - Find a PDF with the documentation of this extension in the [Documentation][5] directory
 - There is a sample available in the [example][6] directory
-- [Video-tutorial][20]
+
 
 ---
 License
@@ -55,10 +53,10 @@ Contributors
 
 [1]: http://www.apache.org/licenses/LICENSE-2.0.html
 [2]:https://developer.ibm.com/predictiveanalytics/downloads/#tab2
-[3]:https://github.com/IBMPredictiveAnalytics/Get-Coordinates-Esri/raw/master/Source%20code/GeocodingESRI.cfe
+[3]:https://github.com/IBMPredictiveAnalytics/Score-with-Zementis/raw/master/Example/ZementisPost.cfe
 [4]:https://cran.r-project.org/web/packages/RCurl/
-[5]:https://github.com/IBMPredictiveAnalytics/Get-Coordinates-Esri/raw/master/Documentation/Geocoding-SPSSModelerExtension.pdf
-[6]:https://github.com/IBMPredictiveAnalytics/Get-Coordinates-Esri/tree/master/Example
+[5]:https://github.com/IBMPredictiveAnalytics/Score-with-Zementis/raw/master/Documentation/Geocoding-SPSSModelerExtension.pdf
+[6]:https://github.com/IBMPredictiveAnalytics/Score-with-Zementis/tree/master/Example
 [10]:https://developer.ibm.com/predictiveanalytics/2015/03/11/tweets-during-esri-dev-summit-and-bnp-paribas-open/
 [11]:https://cran.r-project.org/web/packages/plyr/
 [12]:https://developer.ibm.com/predictiveanalytics/2015/03/11/crime-prediction-using-ibm-spss-modeler-and-arcgis/
