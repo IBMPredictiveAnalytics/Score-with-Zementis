@@ -27,9 +27,9 @@ Installation instructions
 R Packages used
 ----
 The R packages will be installed the first time the node is used as long as an Internet connection is available.
-- [RCurl][4]
+- [httr][4]
 - [plyr][11]
-- [RJSONIO’ ][13]
+- [XML ][13]
 
 ---
 Documentation and samples
@@ -54,11 +54,11 @@ Contributors
 [1]: http://www.apache.org/licenses/LICENSE-2.0.html
 [2]:https://developer.ibm.com/predictiveanalytics/downloads/#tab2
 [3]:https://github.com/IBMPredictiveAnalytics/Score-with-Zementis/raw/master/Example/ZementisPost.cfe
-[4]:https://cran.r-project.org/web/packages/RCurl/
+[4]:https://cran.r-project.org/web/packages/httr/index.html
 [5]:https://github.com/IBMPredictiveAnalytics/Score-with-Zementis/raw/master/Documentation/Geocoding-SPSSModelerExtension.pdf
 [6]:https://github.com/IBMPredictiveAnalytics/Score-with-Zementis/tree/master/Example
 [10]:https://developer.ibm.com/predictiveanalytics/2015/03/11/tweets-during-esri-dev-summit-and-bnp-paribas-open/
 [11]:https://cran.r-project.org/web/packages/plyr/
 [12]:https://developer.ibm.com/predictiveanalytics/2015/03/11/crime-prediction-using-ibm-spss-modeler-and-arcgis/
-[13]:https://cran.r-project.org/web/packages/RJSONIO/index.html
+[13]:https://cran.r-project.org/web/packages/XML/index.html
 [20]:https://www.youtube.com/watch?v=5VpnKVsoxjI
