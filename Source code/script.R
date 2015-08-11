@@ -1,41 +1,60 @@
-library(RCurl)
-library(RJSONIO)
-library(httr)
-location <- modelerData$%%identif_address%%
-#Generate Token
-url = "https://arcgis.com/sharing/rest/generateToken"
-data = list('username'= "%%username%%",
-            'password'= "%%pwd%%",
-            'referer' = 'http://arcgis.com',
-            'expiration' = 1209600,
-            'f'= 'json')
-r<-POST(url,body = data)
-content(r)
-x <- fromJSON(content(r))
-token<-x$token
-print(location)
- root <- "http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/find"
-  u <- paste(root,  "?text=",location, "&token=", token, "&f=json", sep = "")
-u <- gsub(' ','%20',u) #Encode URL Parameters
-print(u)
-require("plyr")
-doc <- aaply(u,1,getURL)
- json <- alply(doc,1,fromJSON,simplify = FALSE)
-coord = laply(json,function(x) {
-   
-      lat <- x$locations[[1]]$feature$geometry$x
-    lng <- x$locations[[1]]$feature$geometry$y
-      return(c(lat,lng))
-   
-  })
-lng<-c(coord[,1])
-lat<-c(coord[,2])
-modelerData<-cbind(modelerData,lat)
-print(modelerData)
-var1<-c(fieldName="Latitude",fieldLabel="",fieldStorage="real",fieldFormat="",fieldMeasure="",  fieldRole="")
-modelerDataModel<-data.frame(modelerDataModel,var1)
-modelerData<-cbind(modelerData,lng)
-print(modelerData)
-var2<-c(fieldName="Longitude",fieldLabel="",fieldStorage="real",fieldFormat="",fieldMeasure="",  fieldRole="")
-modelerDataModel<-data.frame(modelerDataModel,var2)
+library("httr")
+library(XML)
+library(plyr)
+
+
+
+# This function is used to generate automatically the dataModel for SPSS Modeler
+getMetaData <- function (data) {
+  if( is.null(dim(data)))
+    stop("Invalid data received: not a data.frame")
+  if (dim(data)[1]<=0) {
+    print("Warning : modelerData has no line, all fieldStorage fields set to strings")
+    getStorage <- function(x){return("string")}
+  } else {
+    getStorage <- function(x) {
+      x <- unlist(x)
+      res <- NULL
+      #if x is a factor, typeof will return an integer so we treat the case on the side
+      if(is.factor(x)) {
+        res <- "string"
+      } else {
+        res <- switch(typeof(x),
+                      integer="integer",
+                      double = "real",
+                      "string")
+      }
+      return (res)
+    }
+  }
+  col = vector("list", dim(data)[2])
+  for (i in 1:dim(data)[2]) {
+    col[[i]] <- c(fieldName=names(data[i]),
+                  fieldLabel="",
+                  fieldStorage=getStorage(data[i]),
+                  fieldMeasure="",
+                  fieldFormat="",
+                  fieldRole="")
+  }
+  mdm<-do.call(cbind,col)
+  mdm<-data.frame(mdm)
+  return(mdm)
+}
+
+
+
+csv<-modelerData
+write.csv(csv,"c:/iris_temp.csv")
+url = "https://myadapa.zementis.com:443/adapars/apply/%%model%%"
+data<-POST(url, authenticate("%%username%%", "%%pwd%%"), body=list(file=upload_file("c:/iris_temp.csv")))
+html <- content(data, useInternalNodes=T)
+df <- data.frame(matrix(unlist(html$outputs), ncol=length(html$outputs[[1]]), byrow=T))
+names(df)=names(html$outputs[[1]])
+data <- cbind(csv,df)
+file.remove("c:/iris_temp.csv")
+
+
+
+modelerData <- data
+modelerDataModel <- getMetaData(modelerData)
 
