@@ -53,7 +53,7 @@ Contributors
 
 [1]: http://www.apache.org/licenses/LICENSE-2.0.html
 [2]:https://developer.ibm.com/predictiveanalytics/downloads/#tab2
-[3]:https://github.com/IBMPredictiveAnalytics/Score-with-Zementis/raw/master/Example/ZementisPost.cfe
+[3]:https://github.com/IBMPredictiveAnalytics/Score-with-Zementis/raw/master/Source%20code/ZementisPost.cfe
 [4]:https://cran.r-project.org/web/packages/httr/index.html
 [5]:https://github.com/IBMPredictiveAnalytics/Score-with-Zementis/raw/master/Documentation/Zementis-SPSSModelerExtension.pdf
 [6]:https://github.com/IBMPredictiveAnalytics/Score-with-Zementis/tree/master/Example
