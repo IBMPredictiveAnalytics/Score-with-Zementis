@@ -55,7 +55,7 @@ Contributors
 [2]:https://developer.ibm.com/predictiveanalytics/downloads/#tab2
 [3]:https://github.com/IBMPredictiveAnalytics/Score-with-Zementis/raw/master/Example/ZementisPost.cfe
 [4]:https://cran.r-project.org/web/packages/httr/index.html
-[5]:https://github.com/IBMPredictiveAnalytics/Score-with-Zementis/raw/master/Documentation/Geocoding-SPSSModelerExtension.pdf
+[5]:https://github.com/IBMPredictiveAnalytics/Score-with-Zementis/raw/master/Documentation/Zementis-SPSSModelerExtension.pdf
 [6]:https://github.com/IBMPredictiveAnalytics/Score-with-Zementis/tree/master/Example
 [10]:https://developer.ibm.com/predictiveanalytics/2015/03/11/tweets-during-esri-dev-summit-and-bnp-paribas-open/
 [11]:https://cran.r-project.org/web/packages/plyr/
