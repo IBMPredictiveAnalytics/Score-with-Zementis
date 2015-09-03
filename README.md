@@ -1,5 +1,5 @@
 # Score with Zementis
-Adapa scoring engine integrated with IBM SPSS
+Adapa scoring engine integrated with IBM SPSS.
 
 ![Map](https://raw.githubusercontent.com/IBMPredictiveAnalytics/Score-with-Zementis/master/Screenshot/Illustration1.png)
 ![Map](https://raw.githubusercontent.com/IBMPredictiveAnalytics/Score-with-Zementis/master/Screenshot/Illustration2.png)
